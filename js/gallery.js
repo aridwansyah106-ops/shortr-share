@@ -1,5 +1,7 @@
 fetch("data/gallery.json")
+
 .then(response => response.json())
+
 .then(data => {
 
     const gallery = document.getElementById("gallery");
@@ -14,8 +16,13 @@ fetch("data/gallery.json")
 
             <div class="gallery-card">
 
-                <img src="${photo.image}"
-                     class="gallery-image">
+                <img
+
+                    src="${photo.image}"
+
+                    class="gallery-image"
+
+                    onclick="openPhoto('${photo.image}')">
 
             </div>
 
@@ -26,3 +33,29 @@ fetch("data/gallery.json")
     });
 
 });
+
+const modal = document.getElementById("photoModal");
+
+const modalImage = document.getElementById("modalImage");
+
+function openPhoto(image){
+
+    modal.style.display="flex";
+
+    modalImage.src=image;
+
+}
+
+document.querySelector(".close-btn")
+
+.addEventListener("click",()=>{
+
+    modal.style.display="none";
+
+});
+
+modal.onclick=()=>{
+
+    modal.style.display="none";
+
+}
