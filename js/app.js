@@ -1,15 +1,15 @@
 fetch("data/event.json")
+.then(res => res.json())
+.then(data => {
 
-.then(res=>res.json())
+    console.log(data);
 
-.then(data=>{
+    document.getElementById("coupleName").innerHTML = data.couple;
+    document.querySelector(".date").innerHTML = data.date;
+    document.getElementById("photoLink").href = data.photoLink;
+    document.getElementById("gifLink").href = data.gifLink;
 
-    document.getElementById("coupleName").innerHTML=data.couple;
-
-    document.querySelector(".date").innerHTML=data.date;
-
-    document.getElementById("photoLink").href=data.photoLink;
-
-    document.getElementById("gifLink").href=data.gifLink;
-
+})
+.catch(error => {
+    console.error(error);
 });
