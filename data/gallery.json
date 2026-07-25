@@ -1,1 +1,22 @@
-
+{
+  "photos": [
+    {
+      "image": "gallery/IMG001.jpg"
+    },
+    {
+      "image": "gallery/IMG002.jpg"
+    },
+    {
+      "image": "gallery/IMG003.jpg"
+    },
+    {
+      "image": "gallery/IMG004.jpg"
+    },
+    {
+      "image": "gallery/IMG005.jpg"
+    },
+    {
+      "image": "gallery/IMG006.jpg"
+    }
+  ]
+}
